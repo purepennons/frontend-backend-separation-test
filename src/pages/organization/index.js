@@ -2,9 +2,9 @@ import { Suspense } from "react";
 import { useQuery } from "react-query";
 import axios from "axios";
 
-import Loading from "../../components/mixed/Loading";
-import Card from "../../components/mixed/Card";
-import LongInfo from "../../components/mixed/LongInfo";
+import Loading from "../../components/Loading";
+import Card from "../../components/Card";
+import LongInfo from "../../components/LongInfo";
 
 function CardWithData() {
   const {
@@ -35,7 +35,7 @@ function Page() {
   return (
     <div>
       <Suspense fallback={<Loading />}>
-        <CardWithData suppressHydrationWarning />
+        <CardWithData />
       </Suspense>
       <Suspense fallback={<Loading />}>
         <LongInfoWithData />

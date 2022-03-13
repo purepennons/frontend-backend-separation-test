@@ -5,7 +5,7 @@ function Card(props) {
 
   return (
     <div className={styles.container}>
-      <h2>{name}</h2>
+      <h2 suppressHydrationWarning={true}>{name}</h2>
       <p>{page}</p>
       <button onClick={onRetry}>Retry</button>
       <button onClick={onNext}>Next Data</button>

@@ -1,7 +1,14 @@
 // import App from 'next/app'
+import { QueryClientProvider } from "react-query";
+
+import queryClient from "../react-query";
 
 function CustomAppEntry({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Component {...pageProps} />
+    </QueryClientProvider>
+  );
 }
 
 // Only uncomment this method if you have blocking data requirements for

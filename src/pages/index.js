@@ -1,5 +1,5 @@
 import Head from "next/head";
-
+import Link from "next/link";
 import axios from "axios";
 
 function Index(props) {
@@ -13,6 +13,9 @@ function Index(props) {
       </Head>
       <h1>{data.name}</h1>
       <p>{`Page: ${data.page}`}</p>
+      <Link href="/organization">
+        <a>Go to Organization Page</a>
+      </Link>
     </div>
   );
 }

@@ -16,14 +16,7 @@ function CardWithData() {
     )
   );
 
-  return (
-    <Card
-      suppressHydrationWarning
-      name={data.name}
-      page={data.page}
-      onRetry={refetch}
-    />
-  );
+  return <Card name={data.name} page={data.page} onRetry={refetch} />;
 }
 
 function LongInfoWithData() {
@@ -42,7 +35,7 @@ function Page() {
   return (
     <div>
       <Suspense fallback={<Loading />}>
-        <CardWithData />
+        <CardWithData suppressHydrationWarning />
       </Suspense>
       <Suspense fallback={<Loading />}>
         <LongInfoWithData />
